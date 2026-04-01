@@ -18,3 +18,25 @@ python main.py
 以下のコマンドで必要なライブラリを一括インストールできます。
 ```bash
 pip install -r requirements.txt
+
+3.使用したAPIの説明
+このアプリでは、WeatherAPI（https://www.weatherapi.com/） を利用して、指定した都市の現在の天気情報を取得しています。WeatherAPI は無料プランでも利用でき、都市名・緯度経度などから天気データを取得できるシンプルな REST API です。
+
+エンドポイント：https://api.weatherapi.com/v1/current.json
+
+パラメータ：
+key: WeatherAPIのAPI キー
+q: 都市名
+
+レスポンス例：
+{
+  "location": {
+    "name": "Tokyo"
+  },
+  "current": {
+    "temp_c": 18.5,
+    "condition": {
+      "text": "Partly cloudy"
+    }
+  }
+}
